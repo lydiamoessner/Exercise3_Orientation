@@ -1,0 +1,190 @@
+html {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: rgb(255,255,255);
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    background-color: black;
+}
+
+div{
+    /*border: 1px solid red;*/
+}
+
+p{
+    margin:0;
+    padding:0;
+}
+
+button{
+    text-align: center;
+    position: center;
+    margin-left: 42%;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+canvas{
+    margin-left: 40%;
+    margin-top: 30px;
+}
+
+#embedMap{
+    text-align:center;
+}
+
+
+.flexbox{
+    display:flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: solid 1px black;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+.flexbox .box:nth-of-type(4) {
+    background-color: red;
+    margin-right: 0px;
+}
+.flexbox .box:nth-of-type(1) {
+    background-color: red;
+    margin-left: 0px;
+}
+.box{
+    width:20%;
+    margin-top: 10px;
+    /*bottom: 0; Question: How can I get the text alligned at the bottom?*/
+}
+.box1{
+    width:20%;
+    margin-top: 10px;
+
+}
+/*  SECTIONS  */
+.section {
+    clear: both;
+    padding: 0px;
+    margin: 0px;
+}
+
+/*  COLUMN SETUP  */
+.col {
+    display: inline;
+    float:left;
+    margin: 0px;
+}
+.col:first-child { margin-left: 0px; }
+
+
+/*  GROUPING  */
+.group:before,
+.group:after {
+    content:"";
+    display:table;
+}
+.group:after {
+    clear:both;
+}
+.group {
+    zoom:1; /* For IE 6/7 */
+}
+
+/*  GRID OF THREE  */
+.span2_3_of_3 {
+    width: 33.3%;
+}
+.span2_2_of_3 {
+    width: 33.3%;
+}
+.span2_1_of_3 {
+    width: 33.3%;
+}
+.breakout{
+    text-align: center;
+    font-size:6em;
+    font-weight: bold;
+    color: white;
+    border-bottom: solid 1px black;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+.big{
+    font-size: 2em;
+    font-weight: bold;
+}
+.hidden{
+    color:red;
+}
+.spacetop{
+    margin-top: 30px;
+}
+.spacebottom{
+    margin-bottom: 30px;
+}
+.bordertop{
+    border-top: solid 1px black;
+}
+
+@media (max-width: 870px) {
+    .breakout{
+        font-size:8em;
+    }
+    button{
+    margin-left: 38%;
+    }
+    canvas{
+    margin-left: 32%;
+    }
+}
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 675px) {
+    .box{
+        width:150px;
+    }
+    .flexbox{
+        flex-wrap: wrap;
+        flex-basis: 50% | auto;
+    }
+    .flexbox .box {
+        margin-left: 10px;
+    }
+
+    .flexbox .box1:nth-of-type(1) {
+        width:0px;
+    }
+    .flexbox .box:nth-of-type(2) {
+        /*background-color: yellow;*/
+        order:-2;
+        margin-left: 0px;
+    }
+    .flexbox .box {
+        margin-right: 0px;
+    }
+    .breakout{
+        font-size:4em;
+    }
+    button{
+    margin-left: 20%;
+    }
+    canvas{
+    margin-left: 15%;
+    }
+}
+@media (max-width: 675px) {
+    .flexbox .box {
+        margin-left: 0px;
+    }
+}
+@media (max-width: 450px) {
+    canvas{
+    margin-left: 2%;
+    }
+}
